@@ -7,5 +7,8 @@ jobs:
   show:
     runs-on: ubuntu-latest
     steps:
+      - name: checkout repo content
+        uses: actions/checkout@v3 # checkout the repository content to github runner
+
       - name: Show Env
         run: echo "Env ${{ env.ENV_ID }}"
